@@ -1,0 +1,267 @@
+
+body{
+    background-color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, black, #16213e); /* Fondo degradado */
+
+    padding: 15px 20px;
+    border-bottom: 1px solid gray;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: whi;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.news-card {
+    background: rgba(0, 0, 0, 0.2); /* Fondo negro semi-transparente */
+    color: white; /* Texto blanco para buen contraste */
+    border-radius: 10px; /* Bordes redondeados para un diseño más moderno */
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+
+.news-card:hover {
+    background: rgba(30, 30, 30, 0.9); /* Oscurecer más al pasar el cursor */
+    transform: scale(1.03); /* Efecto de zoom */
+}
+
+.news-content p {
+    font-size: 0.88rem;
+    font-family: 'Gotham', sans-serif;
+}
+
+.news-content h3 {
+    font-size: 0.88rem;
+    font-family: 'Gotham', sans-serif;
+    color: aqua;
+}
+.news-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden; /* Evita que la imagen se desborde */
+    border-radius: 8px;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Ajusta la imagen sin deformarla */
+    display: block;
+    transform: translateY(-29px); /* Mueve la imagen 20px hacia arriba */
+}
+.cover-image {
+    object-fit: cover;
+}
+
+
+
+
+
+
+.news-card:nth-child(1) .news-image {
+    background-image: url('resources/images.jpg');
+}
+
+.news-card:nth-child(2) .news-image {
+    background-image: url('resources/images.jpg'); /* Cambia si quieres otra imagen */
+}
+
+.news-card:nth-child(3) .news-image {
+    background-image: url('resources/images.jpg'); /* Cambia si quieres otra imagen */
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: stretch;  
+}
+
+.news-card:hover {
+    transform: translateY(-5px); /* Mueve la carta hacia arriba 5px */
+}
+
+
+.news-image::before {
+    content: "🖼️";
+    font-size: 24px;
+    color: #aaa;
+}
+
+.news-content h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.category {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.medicina {
+    color: orange;
+}
+
+.technology {
+    color: #1a73e8;
+}
+
+.politics {
+    color: #d93025;
+}
+.famous{
+    color: aqua;
+}
+
+.block{
+    color:gold;
+}
+
+
+/* 🌟 Estilos para la carta dorada */
+/* 🌟 Estilos para la carta dorada con reflejo */
+.news-card.block-card {
+    position: relative;
+    overflow: hidden; /* Para que el brillo no salga de los bordes */
+    background: linear-gradient(45deg, #332000, #8B7500); /* Fondo dorado oscuro */
+    border: 2px solid gold;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* ✨ Efecto de luz recorriendo la tarjeta */
+.news-card.block-card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 250%;
+    height: 250%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: rotate(25deg);
+    animation: shine 2.5s infinite linear;
+}
+
+/* ✨ Efecto de texto brillante */
+.news-card.block-card .news-content h2,
+.news-card.block-card .news-content p,
+.news-card.block-card .news-content h3 {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.7);
+    font-weight: bold;
+    animation: shimmer 1s infinite alternate;
+}
+
+/* ✨ Efecto de brillo general */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+    }
+}
+
+/* ✨ Animación de luz recorriendo */
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(25deg); }
+    100% { transform: translateX(100%) rotate(25deg); }
+}
+
+/* ✨ Brillo en el texto */
+@keyframes shimmer {
+    0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.7); }
+    100% { text-shadow: 0 0 15px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.9); }
+}
+
+/* ✨ Efecto de brillo constante */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+    }
+}
+
+/* ✨ Brillo en el texto */
+@keyframes shimmer {
+    0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.7); }
+    100% { text-shadow: 0 0 15px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 215, 0, 0.9); }
+}
+
+.news-card.block-card .news-content h2,
+.news-card.block-card .news-content p,
+.news-card.block-card .news-content h3 {
+    animation: shimmer 1s infinite alternate;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Fondo animado de partículas */
+/* Asegura que el fondo de partículas cubra todo */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Lo envía al fondo */
+    background: linear-gradient(45deg, black, #16213e); /* Fondo degradado */
+}
+

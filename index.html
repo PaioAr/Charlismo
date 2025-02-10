@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlismo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <!-- Contenedor del título -->
+    <div class="title-container">
+        <h1>Bienvenido al <span>Charlismo</span>.</h1>
+    </div>
+    <div class="subtitle-container">
+        <h2 id="subtitle-title"></h2>
+        <h3 id="subtitle-text"></h3>
+    </div>
+    <div class="nav-buttons" id="nav-buttons">
+        <button class="glowing-button"  onclick="window.location.href='https://discord.gg/EkV965CQFU'">Únete</button>
+        <!-- Botón que lleva a noticias.html -->
+        <button class="glowing-button" onclick="window.location.href='noticias.html';">Noticias</button>
+    </div>
+    
+    <div class="created-by" id="created-by">
+        <h3>Created by zPaio_ For fun</h3>
+    </div>
+    
+    <img id="mati-foto" src="resources/mati_gil.png" alt="Mati" style="display: none;">
+
+    <div id="video-container">
+        <iframe id="video" width="560" height="315" 
+            src="https://www.youtube.com/embed/6gpVjE2OYhY?autoplay=0" 
+            frameborder="0" allow="encrypted-media" allowfullscreen>
+        </iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
